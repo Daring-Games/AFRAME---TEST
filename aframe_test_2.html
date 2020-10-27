@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
+    <script src="https://cdn.rawgit.com/elbobo/aframe-multisrc-component/b6d23310/dist/0.3/aframe-multisrc-component.js"></script>
+
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+        <img id="right" src="sides.jpeg">
+        <img id="left" src="sides.jpeg">
+        <img id="top" src="roof.jpeg">
+        <img id="bottom" src="bottom.jpeg">
+        <img id="front" src="front.jpeg">
+        <img id="back" src="back.jpeg">
+      </a-assets>
+      <a-entity light="type: ambient; intensity: 1; color: #FFFFFF"></a-entity>
+      <a-entity light="type: point; intensity: 0.3; distance: 30; color: #FFFFFF"></a-entity>
+      <a-box multisrc="src0: #right; src1: #left; src2: #top; src3: #bottom; src4: #front; src5: #back" side="double" position="-1 0.5 -3" rotation="0 45 0" scale="100, 100, 100"></a-box>
+      <a-plane src="Presentation1.mp4" position="0 0 -4" side="double"  width="18" height="9"></a-plane>
+      <a-text value="JIGYASU IS COMING SOON..." animation="property: position; to: 1000; dur: 190000; easing: linear; loop: false" side="double" position="-20 1 -2.1" color="rgb(0, 250, 17)" bevel= 10; scale="5, 5, 10"></a-text>
+      <a-text value="SO BE READY" animation="property: position; to: 0 1000 0; dur: 190000; easing: linear; loop: false" side="double" position="0 -30 -2.1" color="rgb(100, 0, 107)" bevel= 10; scale="5, 5, 10"></a-text>
+      <a-sky color="#ECECEC"></a-sky>
+      <a-camera position="0 0 5"></a-camera>
+    </a-scene>
+  </body>
+</html>
